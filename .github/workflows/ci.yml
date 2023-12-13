@@ -21,6 +21,10 @@ jobs:
 
       # TODO
       # Configure AWS credentials
+      - name: Configure AWS Credential
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          managed-session-policies: arn:aws:iam::aws:policy/AmazonS3ReadOnlyAccess
       # CloudFormation Lint
       # CloudFormation Static Analysis
       # Build docker images
